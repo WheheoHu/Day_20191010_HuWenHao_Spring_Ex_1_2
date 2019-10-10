@@ -1,5 +1,5 @@
 package NCUT.ShuMei.Dao;
 
 public interface DatabaseDao {
-    void showdataFromTable(String s);
+    void showdataFromTable(String tableName);
 }
