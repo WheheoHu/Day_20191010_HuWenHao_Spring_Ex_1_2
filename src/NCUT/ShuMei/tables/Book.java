@@ -1,39 +1,41 @@
 package NCUT.ShuMei.tables;
 
 public class Book {
-    public Book() {
+    Book() {
     }
 
-    public void setISBN(String ISBN) {
+    void setISBN(String ISBN) {
         this.ISBN = ISBN;
     }
 
-    public void setSm(String sm) {
+    void setSm(String sm) {
         this.sm = sm;
     }
 
-    public void setZz(String zz) {
+    void setZz(String zz) {
         this.zz = zz;
     }
 
-    public void setCbs(String cbs) {
+    void setCbs(String cbs) {
         this.cbs = cbs;
     }
 
-    public void setJg(float jg) {
+    void setJg(float jg) {
         this.jg = jg;
     }
 
-    public void setFbl(int fbl) {
+    void setFbl(int fbl) {
         this.fbl = fbl;
     }
 
-    public void setCul(int cul) {
+    void setCul(int cul) {
         this.cul = cul;
     }
-public void display(){
-        System.out.println(ISBN+" "+sm+" "+zz+" "+cbs+" "+jg+" "+fbl+" "+cul);
-}
+
+    public void display() {
+        System.out.println(ISBN + " " + sm + " " + zz + " " + cbs + " " + jg + " " + fbl + " " + cul);
+    }
+
     private String ISBN;
     private String sm;
     private String zz;
