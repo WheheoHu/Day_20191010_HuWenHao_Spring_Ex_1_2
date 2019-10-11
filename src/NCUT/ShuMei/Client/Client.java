@@ -8,13 +8,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("spring-config.xml");
-//        Service service=(ServiceImpl) context.getBean("serviceimpl");
-//        service.showData();
+        Service service=(ServiceImpl) context.getBean("serviceimpl");
+        service.showData();
 
 //        Service service1=(ServiceImpl2)context.getBean("consserviceimpl");
 //        service1.showData();
 
-        Service service_factory=(ServiceImpl) context.getBean("service_factory_ins_back");
-        service_factory.showData();
+//        Service service_factory=(ServiceImpl) context.getBean("service_factory_ins_back");
+//        service_factory.showData();
     }
 }
