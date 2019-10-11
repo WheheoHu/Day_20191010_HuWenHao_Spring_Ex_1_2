@@ -9,7 +9,20 @@
     <bean id="consserviceimpl" class="NCUT.ShuMei.Service.ServiceImpl2">
         <constructor-arg name="databaseDao" ref="databaseimpl"/>
     </bean>
+    <!-- 静态工厂 -->
+    <bean id="service_factory" class="NCUT.ShuMei.Factory.ServiceFactory" factory-method="getService">
+        <property name="databaseDao" ref="databaseimpl"/>
+    </bean>
 
+    <!--实例工厂 -->
+
+    <bean id="service_factory_ins" class="NCUT.ShuMei.Factory.ServiceFactory_Instant"/>
+    <bean id="service_factory_ins_back" factory-bean="service_factory_ins" factory-method="getService">
+        <property name="databaseDao" ref="databaseimpl"/>
+    </bean>
+
+
+    <!--数据库-->
     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/testschema"/>

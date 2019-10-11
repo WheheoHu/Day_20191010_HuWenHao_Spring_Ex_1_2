@@ -11,7 +11,10 @@ public class Client {
 //        Service service=(ServiceImpl) context.getBean("serviceimpl");
 //        service.showData();
 
-        Service service1=(ServiceImpl2)context.getBean("consserviceimpl");
-        service1.showData();
+//        Service service1=(ServiceImpl2)context.getBean("consserviceimpl");
+//        service1.showData();
+
+        Service service_factory=(ServiceImpl) context.getBean("service_factory_ins_back");
+        service_factory.showData();
     }
 }
